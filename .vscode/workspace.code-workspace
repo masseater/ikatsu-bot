@@ -1,0 +1,20 @@
+{
+  "folders": [
+    {
+      "path": "../"
+    },
+    {
+      "path": "../packages/discord-bot"
+    },
+    {
+      "path": "../packages/infra"
+    },
+    {
+      "path": "../packages/scripts"
+    }
+  ],
+  "settings": {
+    "prettier.configPath": "../.prettierrc.json",
+    "editor.formatOnSave": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  },
+  "scripts": {
+    "start": "ts-node index.ts",
+    "watch": "ts-node-dev index.ts",
+    "build": "parcel build index.ts -d dist --target node"
+  }
+}

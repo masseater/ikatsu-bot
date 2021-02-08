@@ -1,0 +1,42 @@
+{
+  "name": "ikatsubo-discord-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/U1F419/ikatsubo-discord-bot.git",
+  "author": "U1F419 <tak.masuda@opt.ne.jp>",
+  "license": "MIT",
+  "private": "true",
+  "scripts": {
+    "preinstall": "npx only-allow yarn",
+    "format": "run-s format:eslint format:prettier",
+    "format:eslint": "eslint --fix",
+    "format:prettier": "prettier --write .",
+    "deploy": "run-s deploy:infra deploy:script",
+    "deploy:infra": "yarn workspace infra deploy",
+    "deploy:script": "yarn workspace scripts deploy",
+    "start:bot": "yarn workspace discord-bot start"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "dependencies": {
+    "ts-node": "^9.1.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.25",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.2.1",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.3",
+    "jest": "^26.6.3"
+  }
+}
